@@ -1,10 +1,8 @@
-# githublex
-
-Cross-platform bootstrap for GitHub CLI on Google Colab, no-sudo Ubuntu/Jupyter, and Windows. The library installs `gh` into `$HOME/.local/bin` without elevated privileges, configures git identity, and completes OAuth device login in the browser.
+# GitHubLex
 
 ## Overview
 
-Many notebooks and remote shells ship without GitHub CLI or without permission to run `apt install`. Push workflows then fail before the first commit. githublex resolves the gap with two calls:
+Many notebooks and remote shells ship without GitHub CLI or without permission to run `apt install`. Push workflows then fail before the first commit. `githublex` resolves the gap with two calls:
 
 ```python
 from githublex import gh_setup, gh_login
