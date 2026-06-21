@@ -86,31 +86,6 @@ gh_login()
 
 After authorisation, `git push` and `gh repo create` use the stored token.
 
-## Flow
-
-```mermaid
-flowchart TD
-    A[gh_setup] --> B{gh on PATH?}
-    B -->|yes| C[return gh path]
-    B -->|no| D[fetch cli/cli latest release]
-    D --> E[download platform tarball or zip]
-    E --> F[extract to ~/.local/bin]
-    F --> G[prepend PATH]
-    G --> C
-    H[gh_login] --> I{user.name set?}
-    I -->|no| J[input user.name]
-    I -->|yes| K{user.email set?}
-    J --> K
-    K -->|no| L[input user.email]
-    K -->|yes| M{gh auth status ok?}
-    L --> M
-    M -->|no| N[gh auth login --web]
-    N --> O[open github.com/login/device]
-    O --> P[paste one-time code]
-    P --> Q[gh auth setup-git]
-    M -->|yes| Q
-```
-
 ## Platform matrix
 
 | Environment | Install target | Auth |
