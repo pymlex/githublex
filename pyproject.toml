@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "githublex"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fast GitHub CLI setup and browser login for Colab, Ubuntu Jupyter, and Windows"
 readme = "README.md"
 license = { text = "GPL-3.0-or-later" }
@@ -29,7 +29,7 @@ Homepage = "https://github.com/pymlex/githublex"
 Repository = "https://github.com/pymlex/githublex"
 
 [project.scripts]
-githublex = "main:main"
+githublex = "githublex.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

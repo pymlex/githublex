@@ -1,9 +1,4 @@
-from githublex import gh_login, gh_setup
-
-
-def main() -> None:
-    gh_setup()
-    gh_login()
+from githublex.cli import main
 
 
 if __name__ == "__main__":
